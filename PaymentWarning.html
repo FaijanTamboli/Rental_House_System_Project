@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Alert</title>
+    <link rel="stylesheet" href="PaymentWarning.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Side - Image -->
+        <div class="left-side">
+            <img src="payment-warning.png" alt="Do not make payments">
+        </div>
+
+        <!-- Right Side - Text Content -->
+        <div class="right-side">
+            <h1>⚠ Never pay booking amount without visiting the property</h1>
+            <p class="scam-text">Scammers will ask for:</p>
+
+            <ul class="warning-list">
+                <li><span class="cross">❌</span> Property visit charges</li>
+                <li><span class="cross">❌</span> Gate pass booking</li>
+                <li><span class="cross">❌</span> Refundable booking amount</li>
+            </ul>
+
+            <button id="okButton">OK, Understand</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("okButton").addEventListener("click", function() {
+            window.location.href = "RoleSelection.html"; 
+        });
+    </script>
+</body>
+</html>

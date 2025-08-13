@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Owner Login</title>
+    <link rel="stylesheet" href="propertyOwnerLogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Transparent Background Image -->
+        <div class="bg-overlay"></div>
+
+        <!-- Brand Name -->
+        <h1 class="brand">StaySure</h1>
+
+        <!-- Left Section: Service Information -->
+        <div class="left-side">
+            <h2>Things you Can Do with StaySure Account</h2>
+            <ul>
+                <li><i class="fas fa-check-circle"></i>List Your Property Hassle-Free & Get Noticed Instantly!</li>
+                <li><i class="fas fa-check-circle"></i>Post Your Property for FREE & Reach 4 Lakh+ Tenants!</li>
+                <li><i class="fas fa-check-circle"></i>Smart Alerts for Your Rental Needs—Never Miss a Lead!</li>
+                <li><i class="fas fa-check-circle"></i>Showcase Your Property with Photos & Detailed Info!</li>
+                <li><i class="fas fa-check-circle"></i>Get instant queries over Phone, Email and SMS!</li>
+                <li><i class="fas fa-check-circle"></i>Boost Your Property’s Visibility & Track Performance!</li>
+                <li><i class="fas fa-check-circle"></i>Maximize Your Rental Potential—StaySure Makes It Easy!</li>
+            </ul>
+
+        </div>
+
+        <!-- Right Section: Login Form -->
+        <div class="right-side">
+            <h2>StaySure Login</h2>
+            <form id="loginForm" action="propertyOwnerLogin.php" method="POST">
+                <input type="email" name="email" placeholder="Email ID" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <a href="PropOwnerForgotPass.html" class="forgot-pass">Forgot Password?</a>
+                <p class="signup-text">New to StaySure? <a href="PropertyOwnerSignUp.html" class="signup-link">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

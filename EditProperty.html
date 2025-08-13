@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Your Property</title>
+  <link rel="stylesheet" href="AddProperty.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">StaySure</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="AddProperty.html">Post Property</a>
+      <a href="EditProperty.html">Edit Property</a>
+      <a href="DeleteProperty.html">Delete Property</a>
+      <a href="PropertyOwnerSignUp.html" class="register-btn">New User? Register</a>
+    </div>
+  </nav>
+
+  <!-- Main Content: Two Columns -->
+  <div class="main-content">
+    <!-- Form Container (Left Column) -->
+    <div class="form-container">
+      <h2>Edit Your Posted Property</h2>
+      <form id="propertyForm" action="EditProperty.php" method="POST" enctype="multipart/form-data">
+        <label> Enter Registered Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Mobile (Enter WhatsApp No. to get enquiries from Tenant):</label>
+        <input type="tel" name="mobile" pattern="[0-9]{10}" required>
+
+
+        <label>City:</label>
+        <input type="text" name="city" required>
+
+        <label>Locality:</label>
+        <input type="text" name="locality" required>
+
+        <label>Address:</label>
+        <textarea name="address" required></textarea>
+
+        <label>Property Type:</label>
+        <select name="propertyType" required>
+          <option value="">Select</option>
+          <option>1RK</option>
+          <option>1BHK</option>
+          <option>2BHK</option>
+          <option>3BHK</option>
+          <option>4BHK</option>
+        </select>
+
+        <label>Floor No:</label>
+        <input type="number" name="floor" min="0" required>
+
+        <label>Bathrooms:</label>
+        <input type="number" name="bathrooms" min="1" required>
+
+        <label>Balconies:</label>
+        <input type="number" name="balconies" min="0" required>
+
+        <label>Furnished Status:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="furnishing" value="Furnished" required> <span>Furnished</span></label>
+          <label><input type="radio" name="furnishing" value="Semi-Furnished"> <span>Semi-Furnished</span></label>
+          <label><input type="radio" name="furnishing" value="Unfurnished"> <span>Unfurnished</span></label>
+        </div>
+
+        <label>Parking Status:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="parking" value="Yes" required> <span>Yes</span></label>
+          <label><input type="radio" name="parking" value="No"> <span>No</span></label>
+        </div>
+
+        <label>WiFi Status:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="wifi" value="Available" required> <span>Available</span></label>
+          <label><input type="radio" name="wifi" value="Not Available"> <span>Not Available</span></label>
+        </div>
+
+        <label>Electricity Status:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="electricity" value="Available" required> <span>Available</span></label>
+          <label><input type="radio" name="electricity" value="Not Available"> <span>Not Available</span></label>
+        </div>
+
+        <label>Water Supply:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="water" value="24x7" required> <span>24x7</span></label>
+          <label><input type="radio" name="water" value="Limited"> <span>Limited</span></label>
+        </div>
+
+        <label>Property Availability:</label>
+        <div class="radio-group">
+          <label><input type="radio" name="availability" value="Immediate" required> <span>Immediate</span></label>
+          <label><input type="radio" name="availability" value="Select Date"> <span>Select Date</span></label>
+        </div>
+        <!-- Date picker will display only when "Select Date" is chosen -->
+        <input type="date" name="availabilityDate" id="availabilityDate" style="display: none;">
+
+        <label>Age of Construction:</label>
+        <select name="age" required>
+          <option value="">Select</option>
+          <option>New Construction</option>
+          <option>Less than 5 years</option>
+          <option>5 to 10 years</option>
+          <option>10 to 15 years</option>
+          <option>15 to 20 years</option>
+          <option>Above 20 years</option>
+        </select>
+
+        <label>Monthly Rent:</label>
+        <input type="text" name="rent" required>
+
+        <label>Security Deposit:</label>
+        <input type="text" name="security" required>
+
+        <label>Maintenance Charges:</label>
+        <!-- Maintenance charges: enter amount and select frequency -->
+        <div class="maintenance-group">
+          <input type="text" name="maintenanceAmount" placeholder="Enter amount" required>
+          <select name="maintenanceType" required>
+            <option value="Monthly">Monthly</option>
+            <option value="Quarterly">Quarterly</option>
+            <option value="Yearly">Yearly</option>
+          </select>
+        </div>
+
+        <label>Upload Photos:</label>
+        <input type="file" name="photos[]" multiple>
+
+        <div class="checkbox-group">
+          <label class="checkbox-label"><p>I am posting this property exclusively on StaySure</p><input type="checkbox" required></label>
+          <label class="checkbox-label"><p>I agree to StaySure T&C, Privacy Policy & Cookie Policy</p><input type="checkbox" required></label>
+          <label class="checkbox-label"><p>I want to receive responses on WhatsApp</p><input type="checkbox"></label>
+        </div>
+
+        <button type="submit">Edit Property</button>
+      </form>
+    </div>
+
+    <!-- Instructions Panel (Right Column) -->
+    <div class="instructions">
+      <h2>Edit Your Property in 3 Simple Steps</h2>
+      <div class="step">
+        <h3>01. Edit details of your property</h3>
+        <p>Begin by telling us a few basic details about your 
+          property type, location, number of 
+          rooms, etc.</p>
+      </div>
+      <div class="step">
+        <h3>02. Change Pricing & Ownership</h3>
+        <p>Just update your property's ownership details and your expected price & security Deposit. </p>
+      </div>
+      <div class="step">
+        <h3>03. Upload Photos</h3>
+        <p>Upload photos of your property either via your desktop device or from your mobile phone & your property is ready for posting again.</p>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="AddProperty.js"></script>
+</body>
+</html>

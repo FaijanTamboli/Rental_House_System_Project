@@ -1,0 +1,132 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Background Image Overlay */
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background_home.jpg') no-repeat center center/cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Container */
+.container {
+    display: flex;
+    margin-top: 50px;
+    width: 80%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+/* StaySure Branding */
+.brand {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e04e06;
+}
+
+/* Left Side: Service Experience */
+.left-side {
+    color:black;
+    box-sizing: border-box;
+    margin-right: 200px;
+    width: 80%;
+    height: 50vh;
+}
+
+.left-side h2 {
+    font-size: 22px;
+    color:black;
+    margin-bottom: 20px;
+}
+.left-side ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-side ul li {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.left-side ul li i {
+    color: #27ae60;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* right-side */
+.right-side {
+    width: 50%;
+    background: white;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 80vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-side h2 {
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+.right-side form {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-side input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.right-side button {
+    padding: 10px;
+    font-size: 16px;
+    background: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.right-side button:hover {
+    background: #286844;
+}
+.clear-btn {
+    background: #bdc3c7;
+    color: #f40b0b;
+    margin-top: 10px;
+}
+
+.clear-btn:hover {
+    background: #95a5a6;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Selection</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #3d3636;
+        }
+        .brand {
+              position: absolute;
+              top: 10px;
+              left: 30px;
+              font-size: 24px;
+              font-weight: bold;
+              color: #e00d06;
+     }
+        .container {
+            background: rgb(174, 205, 84);
+            padding: 20px;
+            width:30%;
+            height:50%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        select, button {
+            width: 70%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #28a745;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="brand">StaySure</h1>
+        <h2>Select StaySure Role</h2>
+        <select id="role">
+            <option value="" disabled selected>Select Your Role </option>
+            <option value="propertyOwner">Property Owner</option>
+            <option value="tenant">Tenant</option>
+        </select>
+        <button onclick="navigate()">Submit</button>
+    </div>
+
+    <script>
+        function navigate() {
+            let role = document.getElementById("role").value;
+            if (role === "propertyOwner") {
+                window.location.href = "propertyOwnerLogin.html";
+            } else if (role === "tenant") {
+                window.location.href = "TenantLogin.html";
+            } else {
+                alert("Please select a role before submitting!");
+            }
+        }
+    </script>
+
+</body>
+</html>

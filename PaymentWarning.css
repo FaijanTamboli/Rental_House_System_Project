@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #38383b;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    background: white;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Left Side - Image */
+.left-side {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #686262;
+    padding: 20px;
+}
+
+.left-side img {
+    width: 100%;
+}
+
+/* Right Side - Text Content */
+.right-side {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: white;
+}
+
+/* Heading */
+h1 {
+    font-size: 25px;
+    color:black;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Scammers text */
+.scam-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #8d3737;
+    text-align: center;
+}
+
+/* Warning List */
+.warning-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.warning-list li {
+    font-size: 16px;
+    color: #333;
+    background:white;
+    padding: 5px;
+    margin: 8px 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Cross Icon inside a Circle */
+.cross {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(66, 63, 63);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Button */
+button {
+    background: #7b65f8;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #218838;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+        text-align: center;
+    }
+
+    .left-side img {
+        width: 70%;
+    }
+}
